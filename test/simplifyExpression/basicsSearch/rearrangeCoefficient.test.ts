@@ -1,6 +1,5 @@
 import { rearrangeCoefficient } from "../../../lib/src/simplifyExpression/basicsSearch/rearrangeCoefficient";
-import {testSimplify} from './testSimplify.test';
-
+import { testSimplify } from "./testSimplify.test";
 
 describe("rearrangeCoefficient", function () {
   const tests = [
