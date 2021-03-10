@@ -1,7 +1,7 @@
 import { removeExponentByOne } from "../../../lib/src/simplifyExpression/basicsSearch/removeExponentByOne";
 
-import { testSimplify } from "./testSimplify.test";
+import { testSimplifyOperation } from "./testSimplify.test";
 
 describe("removeExponentByOne", function () {
-  testSimplify("x^1", "x", removeExponentByOne);
+  testSimplifyOperation("x^1", "x", removeExponentByOne);
 });

@@ -10,6 +10,9 @@ import { printAscii } from "../util/print";
 // Returns the simplified expression node.
 export function simplify(node, debug = false) {
   if (hasUnsupportedNodes(node)) {
+    if (debug) {
+      throw new Error("UNSUPPORTED_NODES");
+    }
     return node;
   }
 

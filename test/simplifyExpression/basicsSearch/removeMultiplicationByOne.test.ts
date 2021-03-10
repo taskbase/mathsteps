@@ -1,6 +1,6 @@
 import { removeMultiplicationByOne } from "../../../lib/src/simplifyExpression/basicsSearch/removeMultiplicationByOne";
 
-import { testSimplify } from "./testSimplify.test";
+import { testSimplifyOperation } from "./testSimplify.test";
 
 describe("removeMultiplicationByOne", function () {
   const tests = [
@@ -9,5 +9,5 @@ describe("removeMultiplicationByOne", function () {
     ["1*z^2", "z^2"],
     ["2*1*z^2", "2 * 1z^2"],
   ];
-  tests.forEach((t) => testSimplify(t[0], t[1], removeMultiplicationByOne));
+  tests.forEach((t) => testSimplifyOperation(t[0], t[1], removeMultiplicationByOne));
 });

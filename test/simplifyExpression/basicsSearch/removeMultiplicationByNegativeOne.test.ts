@@ -1,6 +1,6 @@
 import { removeMultiplicationByNegativeOne } from "../../../lib/src/simplifyExpression/basicsSearch/removeMultiplicationByNegativeOne";
 
-import { testSimplify } from "./testSimplify.test";
+import { testSimplifyOperation } from "./testSimplify.test";
 
 describe("removeMultiplicationByNegativeOne", function () {
   const tests = [
@@ -9,6 +9,6 @@ describe("removeMultiplicationByNegativeOne", function () {
     ["2x*2*-1", "2x * 2 * -1"], // does not remove multiplication by -1
   ];
   tests.forEach((t) =>
-    testSimplify(t[0], t[1], removeMultiplicationByNegativeOne)
+    testSimplifyOperation(t[0], t[1], removeMultiplicationByNegativeOne)
   );
 });

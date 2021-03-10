@@ -1,6 +1,6 @@
 import { removeAdditionOfZero } from "../../../lib/src/simplifyExpression/basicsSearch/removeAdditionOfZero";
 
-import { testSimplify } from "./testSimplify.test";
+import { testSimplifyOperation } from "./testSimplify.test";
 
 describe("removeAdditionOfZero", function () {
   var tests = [
@@ -8,5 +8,5 @@ describe("removeAdditionOfZero", function () {
     ["2+x+0", "2 + x"],
     ["0+2+x", "2 + x"],
   ];
-  tests.forEach((t) => testSimplify(t[0], t[1], removeAdditionOfZero));
+  tests.forEach((t) => testSimplifyOperation(t[0], t[1], removeAdditionOfZero));
 });

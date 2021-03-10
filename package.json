@@ -6,6 +6,7 @@
   "scripts": {
     "build": "npm run test && cd lib && tsc && cp ./package.json ../dist",
     "test": "npx ts-mocha -p test/tsconfig.json './test/**/*.test.ts'",
+    "test-single": "npx ts-mocha -p test/tsconfig.json './test/**/syntax.test.ts'",
     "setup-hooks": "ln -s ../../scripts/git-hooks/pre-commit.sh .git/hooks/pre-commit",
     "prettify": "prettier --write \"lib/**/*.ts\"",
     "prettify-tests": "prettier --write \"test/**/*.ts\"",

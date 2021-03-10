@@ -112,4 +112,5 @@ export enum NodeTypeEnum {
   FUNCTION_NODE = "FunctionNode",
   OPERATOR_NODE = "OperatorNode",
   PARENTHESIS_NODE = "ParenthesisNode",
+  FRACTION_NODE = "fraction",
 }
