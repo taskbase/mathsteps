@@ -7,5 +7,7 @@ describe("reduce multiplication by 0", function () {
     ["0x", "0"],
     ["2*0*z^2", "0"],
   ];
-  tests.forEach((t) => testSimplifyOperation(t[0], t[1], reduceMultiplicationByZero));
+  tests.forEach((t) =>
+    testSimplifyOperation(t[0], t[1], reduceMultiplicationByZero)
+  );
 });

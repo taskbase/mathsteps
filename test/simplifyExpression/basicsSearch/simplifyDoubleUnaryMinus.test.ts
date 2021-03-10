@@ -7,5 +7,7 @@ describe("simplifyDoubleUnaryMinus", function () {
     ["--5", "5"],
     ["--x", "x"],
   ];
-  tests.forEach((t) => testSimplifyOperation(t[0], t[1], simplifyDoubleUnaryMinus));
+  tests.forEach((t) =>
+    testSimplifyOperation(t[0], t[1], simplifyDoubleUnaryMinus)
+  );
 });

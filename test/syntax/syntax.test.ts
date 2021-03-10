@@ -1,4 +1,4 @@
-import {testSimplify} from '../simplifyExpression/basicsSearch/testSimplify.test';
+import { testSimplify } from "../simplifyExpression/basicsSearch/testSimplify.test";
 
 describe("test understanding of syntax", () => {
   const tests = [

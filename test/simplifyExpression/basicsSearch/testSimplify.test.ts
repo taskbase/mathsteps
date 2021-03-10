@@ -1,8 +1,8 @@
 import assert = require("assert");
 import { printAscii } from "../../../lib/src/util/print";
 import { TestUtil } from "../../TestUtil";
-import * as math from 'mathjs';
-import {simplify} from '../../../lib/src/simplifyExpression/simplify';
+import * as math from "mathjs";
+import { simplify } from "../../../lib/src/simplifyExpression/simplify";
 
 export function testSimplifyOperation(exprStr, outputStr, simplifyOperation) {
   it(exprStr + " -> " + outputStr, function () {
@@ -19,15 +19,12 @@ export function testSimplify(
 ) {
   it(inputString + " -> " + expectedOutputString, () => {
     const parsed = math.parse(inputString);
-    const simplified = simplify(parsed, debug)
+    const simplified = simplify(parsed, debug);
     const printed = printAscii(simplified);
     if (debug) {
-      console.log('parsed', parsed, JSON.stringify(parsed));
-      console.log('printed', printed);
+      console.log("parsed", parsed, JSON.stringify(parsed));
+      console.log("printed", printed);
     }
-    assert.deepEqual(
-      printed,
-      expectedOutputString
-    );
+    assert.deepEqual(printed, expectedOutputString);
   });
 }

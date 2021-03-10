@@ -9,5 +9,7 @@ describe("removeMultiplicationByOne", function () {
     ["1*z^2", "z^2"],
     ["2*1*z^2", "2 * 1z^2"],
   ];
-  tests.forEach((t) => testSimplifyOperation(t[0], t[1], removeMultiplicationByOne));
+  tests.forEach((t) =>
+    testSimplifyOperation(t[0], t[1], removeMultiplicationByOne)
+  );
 });
