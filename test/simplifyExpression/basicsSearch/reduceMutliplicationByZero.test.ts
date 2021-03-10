@@ -1,6 +1,6 @@
 import { reduceMultiplicationByZero } from "../../../lib/src/simplifyExpression/basicsSearch/reduceMultiplicationByZero";
 
-import { testSimplify } from "./testSimplify";
+import { testSimplify } from "./testSimplify.test";
 
 describe("reduce multiplication by 0", function () {
   const tests = [

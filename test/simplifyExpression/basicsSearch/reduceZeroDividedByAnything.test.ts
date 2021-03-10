@@ -1,6 +1,6 @@
 import { reduceZeroDividedByAnything } from "../../../lib/src/simplifyExpression/basicsSearch/reduceZeroDividedByAnything";
 
-import { testSimplify } from "./testSimplify";
+import { testSimplify } from "./testSimplify.test";
 
 describe("simplify basics", function () {
   const tests = [

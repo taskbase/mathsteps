@@ -1,6 +1,6 @@
 import { removeAdditionOfZero } from "../../../lib/src/simplifyExpression/basicsSearch/removeAdditionOfZero";
 
-import { testSimplify } from "./testSimplify";
+import { testSimplify } from "./testSimplify.test";
 
 describe("removeAdditionOfZero", function () {
   var tests = [

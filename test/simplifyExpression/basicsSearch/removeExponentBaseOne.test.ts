@@ -1,6 +1,6 @@
 import { removeExponentBaseOne } from "../../../lib/src/simplifyExpression/basicsSearch/removeExponentBaseOne";
 
-import { testSimplify } from "./testSimplify";
+import { testSimplify } from "./testSimplify.test";
 
 describe("removeExponentBaseOne", function () {
   const tests = [

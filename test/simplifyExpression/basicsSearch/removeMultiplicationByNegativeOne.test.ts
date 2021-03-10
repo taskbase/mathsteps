@@ -1,6 +1,6 @@
 import { removeMultiplicationByNegativeOne } from "../../../lib/src/simplifyExpression/basicsSearch/removeMultiplicationByNegativeOne";
 
-import { testSimplify } from "./testSimplify";
+import { testSimplify } from "./testSimplify.test";
 
 describe("removeMultiplicationByNegativeOne", function () {
   const tests = [

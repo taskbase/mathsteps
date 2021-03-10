@@ -1,6 +1,6 @@
 import { simplifyDoubleUnaryMinus } from "../../../lib/src/simplifyExpression/basicsSearch/simplifyDoubleUnaryMinus";
 
-import { testSimplify } from "./testSimplify";
+import { testSimplify } from "./testSimplify.test";
 
 describe("simplifyDoubleUnaryMinus", function () {
   var tests = [
