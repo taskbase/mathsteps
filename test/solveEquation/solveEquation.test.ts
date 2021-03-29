@@ -19,7 +19,13 @@ function testSolve(equationString, outputStr, debug = false) {
 }
 
 describe("mixed cases", () => {
-  const tests = [["3(x+2)=12", "x = 2"]];
+  const tests = [
+    ["3(x+2)=12", "x = 2"],
+    ["5x=20+5", "x = 5"],
+
+    // binom
+    // ['x^2+4=4x', 'x=2'], NOT working, no steps
+  ];
   tests.forEach((t) => testSolve(t[0], t[1]));
 });
 

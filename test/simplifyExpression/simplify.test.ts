@@ -1,8 +1,8 @@
 import * as math from "mathjs";
 
 import { simplify } from "../../lib/src/simplifyExpression/simplify";
-import assert = require("assert");
 import { printAscii } from "../../lib/src/util/print";
+import assert = require("assert");
 
 function testSimplify(
   inputString: string,
@@ -19,9 +19,28 @@ function testSimplify(
 
 describe("mixed cases", () => {
   const tests = [
+    ["x+x+y+y", "2x + 2y"],
+    ["((a^3+b)/c)/(1/c^2)", "a^3 * c + b * c"], // working but not 100% nice: a^3 * c + b * c
+    ["(a-1)*(a+1)*(a+2)", "a^3 + 2a^2 - a - 2"],
+    // ['(z/6-3/z)^2', '1/36 z^2 - 1 + 9 / (z^2)'], // NOT working, it gets the wrong solution: 1/36 z^2 - 7/2 + 9 / (z^2) ...
+    // ['7a^2+28a+28', '7*(a+2)^2'], // NOT working, it gets the wrong solution: 1/36 z^2 - 7/2 + 9 / (z^2) ...
+
+    // Distributivgesetz
+    ["(3a-2)(3a+2)", "9a^2 - 4"],
+
+    // Binom
+    // ['(x+y)^2+(x-y)^2+(-x+y)^2+(-x-y)^2', '4x^2 + 4y^2'], // NOT working, yields: 4x^2 + 4y^2 + x * y + y * x + x * -y - y * x - x * y + y * -x + x * y + x * y ... WTF => can't handle multiple variables well
+    ["(2-x)^2-(2-x)(2+x)+(2+x)^2", "3x^2 + 4"],
+
     // ["(1/x+1/y)/(1/x-1/y)", "y+x/y-x"] not working
     // ["(7x/8b) / (14x/10b^2)", "5b/8"] not working
     // ["(a^2+2*a+1)/(a+1)", "a+1"] not working
+    // ["((a+b)/b)*(a/(-a-b))", "-a/b"], not working, yields a^2 / (b * -a - b^2) + a / (-a - b)
+    // ["(x^2+6x+9)/(5y-5) * (10-10y)/(x^2+5x+6)", "(-2x-6)/(x+2)"], // not working, yields: very long thing...
+    // ["(1/x+1/y)/(1/x-1/y)", "y+x/y-x"] not working
+    // ["(7x/8b) / (14x/10b^2)", "5b/8"] not working
+    // ["(a^2+2*a+1)/(a+1)", "a+1"] not working
+    // ["((w^2+w^3)/(w+1))/w^3", "1w"], // not working, yields: w^-1 / (w + 1) + 1 / (w + 1)
   ];
   tests.forEach((t) => testSimplify(t[0], t[1]));
 });
